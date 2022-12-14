@@ -1,6 +1,7 @@
 package io.github.jhutch1979.mccourse.block;
 
 import io.github.jhutch1979.mccourse.MCCourseMod;
+import io.github.jhutch1979.mccourse.block.custom.SpeedyBlock;
 import io.github.jhutch1979.mccourse.item.ModCreativeModeTab;
 import io.github.jhutch1979.mccourse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -35,6 +36,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(5F).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(5F).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
