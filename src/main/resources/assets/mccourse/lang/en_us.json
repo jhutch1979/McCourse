@@ -16,5 +16,9 @@
   "block.mccourse.raw_cobalt_ore": "Raw Cobalt Ore",
   "block.mccourse.speedy_block": "Speedy Block",
 
-  "itemGroup.coursemodtab": "McCourse Mod"
+  "itemGroup.coursemodtab": "McCourse Mod",
+
+  "tooltip.mccourse.dowsing_rod.tooltip.shift": "Right click to find values",
+  "tooltip.mccourse.dowsing_rod.tooltip": "Press §eShift§r for more information!",
+  "tooltip.block.speedy_block": "It gets really speedy"
 }
