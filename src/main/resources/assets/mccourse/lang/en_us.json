@@ -1,6 +1,17 @@
 {
+
   "item.mccourse.cobalt_ingot": "Cobalt Ingot",
   "item.mccourse.cobalt_nugget": "Cobalt Nugget",
+  "item.mccourse.raw_cobalt": "Raw Cobalt",
+  "item.mccourse.dowsing_rod": "Dowsing Rod",
+
+  "item.mccourse.dowsing_rod.no_valuables": "No Valuables Found",
+
+
   "block.mccourse.cobalt_block": "Cobalt Block",
-  "block.mccourse.cobalt_ore": "Cobalt Ore"
+  "block.mccourse.cobalt_ore": "Cobalt Ore",
+  "block.mccourse.deepslate_cobalt_block": "Deepslate Cobalt Block",
+  "block.mccourse.raw_cobalt_ore": "Raw Cobalt Ore",
+
+  "itemGroup.coursemodtab": "McCourse Mod"
 }
