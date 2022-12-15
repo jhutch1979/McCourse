@@ -3,6 +3,8 @@ package io.github.jhutch1979.mccourse;
 import io.github.jhutch1979.mccourse.block.ModBlocks;
 import io.github.jhutch1979.mccourse.item.ModItems;
 import io.github.jhutch1979.mccourse.util.ModItemProperties;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -52,6 +54,7 @@ public class MCCourseMod
     }
 
     private void clientSetup(final FMLCommonSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TURNIP_CROP.get(), RenderType.cutout());
         ModItemProperties.addCustomItemProperties();
     }
 

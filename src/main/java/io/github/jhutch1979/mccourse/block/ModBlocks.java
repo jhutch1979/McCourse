@@ -3,6 +3,7 @@ package io.github.jhutch1979.mccourse.block;
 import io.github.jhutch1979.mccourse.MCCourseMod;
 import io.github.jhutch1979.mccourse.block.custom.CobaltLampBlock;
 import io.github.jhutch1979.mccourse.block.custom.SpeedyBlock;
+import io.github.jhutch1979.mccourse.block.custom.TurnipCropBlock;
 import io.github.jhutch1979.mccourse.item.ModCreativeModeTab;
 import io.github.jhutch1979.mccourse.item.ModItems;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -50,6 +52,10 @@ public class ModBlocks {
             () -> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(3F).lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0 ))
             , ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
+                    .noCollission().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
