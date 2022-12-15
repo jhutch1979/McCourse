@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "mccourse:item/data_tablet_on"
+  }
+}

@@ -2,6 +2,7 @@ package io.github.jhutch1979.mccourse.item;
 
 import io.github.jhutch1979.mccourse.MCCourseMod;
 import io.github.jhutch1979.mccourse.item.custom.CoalSliverItem;
+import io.github.jhutch1979.mccourse.item.custom.DataTabletItem;
 import io.github.jhutch1979.mccourse.item.custom.DowsingRodItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -31,7 +32,10 @@ public class ModItems {
             () -> new CoalSliverItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
-            () -> new CoalSliverItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.TURNIP)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.TURNIP)));
+
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus){

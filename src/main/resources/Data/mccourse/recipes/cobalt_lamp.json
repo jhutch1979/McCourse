@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GRG",
+    "R#R",
+    "GRG"
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:cobalt_block"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "mccourse:cobalt_lamp"
+  }
+}

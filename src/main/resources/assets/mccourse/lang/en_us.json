@@ -6,6 +6,7 @@
   "item.mccourse.dowsing_rod": "Dowsing Rod",
   "item.mccourse.coal_sliver": "Coal Sliver",
   "item.mccourse.turnip": "Turnip",
+  "item.mccourse.data_tablet": "Data Tablet",
 
   "item.mccourse.dowsing_rod.no_valuables": "No Valuables Found",
 
@@ -15,6 +16,7 @@
   "block.mccourse.deepslate_cobalt_block": "Deepslate Cobalt Block",
   "block.mccourse.raw_cobalt_ore": "Raw Cobalt Ore",
   "block.mccourse.speedy_block": "Speedy Block",
+  "block.mccourse.cobalt_lamp": "Cobalt Lamp",
 
   "itemGroup.coursemodtab": "McCourse Mod",
 

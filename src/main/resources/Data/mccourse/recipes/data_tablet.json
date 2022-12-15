@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "!!!",
+    "RGR",
+    "!!!"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "!": {
+      "item": "mccourse:cobalt_nugget"
+    }
+  },
+  "result": {
+    "item": "mccourse:data_tablet"
+  }
+}

@@ -2,6 +2,7 @@ package io.github.jhutch1979.mccourse;
 
 import io.github.jhutch1979.mccourse.block.ModBlocks;
 import io.github.jhutch1979.mccourse.item.ModItems;
+import io.github.jhutch1979.mccourse.util.ModItemProperties;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +37,7 @@ public class MCCourseMod
         ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
 
         // Register ourselves for server and other game events we are interested in
@@ -47,6 +49,10 @@ public class MCCourseMod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event){
+        ModItemProperties.addCustomItemProperties();
     }
 
 
