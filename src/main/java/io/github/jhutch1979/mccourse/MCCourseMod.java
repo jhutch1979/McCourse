@@ -2,11 +2,14 @@ package io.github.jhutch1979.mccourse;
 
 import io.github.jhutch1979.mccourse.block.ModBlocks;
 import io.github.jhutch1979.mccourse.item.ModItems;
+import io.github.jhutch1979.mccourse.sound.ModSounds;
 import io.github.jhutch1979.mccourse.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,6 +41,8 @@ public class MCCourseMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModSounds.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -46,16 +51,22 @@ public class MCCourseMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.TURNIP_SEEDS.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.TURNIP.get(), 0.65f);
+        });
     }
 
-    private void clientSetup(final FMLCommonSetupEvent event){
+    private void clientSetup(final FMLCommonSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TURNIP_CROP.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
+
+        ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
+
         ModItemProperties.addCustomItemProperties();
+
     }
 
 

@@ -8,10 +8,13 @@ import io.github.jhutch1979.mccourse.item.ModCreativeModeTab;
 import io.github.jhutch1979.mccourse.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -52,6 +55,14 @@ public class ModBlocks {
             () -> new CobaltLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(3F).lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0 ))
             , ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
+            () -> new FlowerBlock(MobEffects.BLINDNESS, 4,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
+            () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)));
 
     public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
             () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)

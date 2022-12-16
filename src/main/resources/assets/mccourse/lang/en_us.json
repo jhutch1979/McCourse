@@ -19,10 +19,15 @@
   "block.mccourse.speedy_block": "Speedy Block",
   "block.mccourse.cobalt_lamp": "Cobalt Lamp",
   "block.mccourse.turnip_crop": "Turnip Crop",
+  "block.mccourse.pink_rose": "Pink Rose",
+  "block.mccourse.potted_pink_rose": "Potted Pink Rose",
 
   "itemGroup.coursemodtab": "McCourse Mod",
 
   "tooltip.mccourse.dowsing_rod.tooltip.shift": "Right click to find values",
   "tooltip.mccourse.dowsing_rod.tooltip": "Press §eShift§r for more information!",
-  "tooltip.block.speedy_block": "It gets really speedy"
+  "tooltip.block.speedy_block": "It gets really speedy",
+
+
+  "sound.mccourse.dowsing_rod_found_ore": "Dowsing rod found item sound"
 }
